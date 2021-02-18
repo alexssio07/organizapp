@@ -1,7 +1,13 @@
+import { Content } from '@angular/compiler/src/render3/r3_ast';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { ContentMenuComponent } from './content-menu/content-menu.component';
+import { MenuComponent } from './menu/menu.component';
 
-const routes: Routes = [];
+const routes: Routes = [
+  { path: '', pathMatch: 'full', redirectTo: 'home'},
+  { path: 'home', component: MenuComponent },
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
